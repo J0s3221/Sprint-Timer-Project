@@ -1,0 +1,92 @@
+==== Projeto de sprint timer Raul ====
+
+Funcionamento:
+
+Mede o tempo de entre a ativação do sensor de movimento 2, depois de ter sido ativado o sensor de movimento 1. Na pratica mede a velocidade de um sprint entre os dois sensores e mostra o resultado no ecrã LCD na caixa.
+
+Componentes: 
+
+- Sensores de movimento (2)
+- Relays mecânicos (2)
+- Microcontrolador Raspberry pi pico (1)
+- Módulo dc-dc step-up (1)
+- Módulo dc-dc step-down (1)
+- Módulo de carregamento com BMS (1)
+- Display LCD (1)
+- Módulo I2C adapter (1)
+- Baterias de lítio 3.7V (2)
+- Caixa de plástico (1)
+- Cabos diversos
+
+=== Conceito inicial ===
+
+Dois sensores um de partida (começa o contador) outro de chegada (para o contador) e um "cérebro".
+
+=== Desenvolvimento do primeiro Protótipo ===
+
+Primeiro problema: Como fazer o cérebro e como ligar o cérebro aos sensores.
+
+Solução: Usar um microcontrolador Raspberry pi pico com um código em python simples. O pico está diretamente ligado aos sensores por cabo, começa a contar tempo quando o primeiro é ativado e termina quando o segundo é ativado.
+
+Segundo problema: Os sensores trabalham de 12 a 24V enquanto que o Raspberry pi pico só aguenta 3.3 a 5V. Não podem estar diretamente ligados.
+
+Solução: Usar relays mecânicos para separar fisicamente as correntes mas permitir conexão. (isto requer duas fontes de alimentação com voltagens diferentes) 
+
+Terceiro problema: Como ver o resultado das corridas?
+
+Solução: Usar um pequeno display LCD para mostrar os três últimos tempos (aquele que acabou de ser registado e os últimos dois antes desse para o caso de uma leitura falsa não se perder o tempo) e os quatro estados do projeto: a iniciar, pronto para medição, a medir e a mostrar medição
+
+Explicação dos estados: 
+- A iniciar, quando se liga o projeto ele demora 5 segundos a começar e passar para o próximo estado (pronto para medir). Nestes segundos consegue se verificar que o display está a funcionar corretamente e não é possível começar o contador ainda (mesmo ativando o sensor de partida).
+- Pronto para medição, depois de iniciar ou depois de mostrar a medição o projeto entre no estado em que está pronto para começar a medir um sprint. Para isso basta ativar o sensor de partida.
+- A medir/em funcionamento, depois de ativar o sensor de partida quando o projeto estava em estado "pronto para medição" começa o contador e só para de contar quando o sensor de chegada for ativado. Só entra neste estado se o estado prévio for o "pronto para medição" mesmo que se ative o sensor de partida em qualquer outro estado (incluindo este mesmo) não vai começar uma medição.
+- A mostrar medição/resultado, o projeto passa para este estado quando o sensor de chegada é ativado quando uma medição estava a decorrer (o estado prévio era A medir/em funcionamento). Neste estado o projeto mostra durante 5 segundos o ultimo resultado e não é possível começar uma nova medição.
+
+Quarto problema: Como alimentar o projeto?
+
+Duas soluções disponíveis: Ligar o projeto por cabo a uma fonte de alimentação de corrente alternada (ligar a uma tomada) ou o projeto ter a sua própria fonte de alimentação integrada (bateria).
+
+Solução escolhida: Fonte de alimentação integrada com um pack de baterias de lítio.
+
+Quinto problema: Como conseguir duas fontes de alimentação com voltagens diferentes a partir do mesmo pack de baterias?
+
+Solução inicial: pack de 6 baterias de 3.7V ligas em serie com voltagem resultante de ~22.2V.
+
+Ligar o pack de baterias diretamente aos sensores e para o pico usar um módulo dc-dc step down configurado para dar entre 4 e ~5V.
+
+**Imagem da topologia do projeto neste momento (com o pico, os dois sensores ligados com relays, o módulo step down, o display e a fonte de alimentação**
+
+A este ponto o projeto estava totalmente funcional mas tinha um problema: O pack de baterias tinha que ser periodicamente substituído ou recarregado. Nesta iteração do protótipo não havia uma solução integrada para este efeito.
+
+
+=== Desenvolvimento Segundo Protótipo ===
+
+O segundo protótipo resolve o problema de alimentação deixado no primeiro com uma solução de carregamento integrada
+
+Implementação:
+
+Usar um modulo de carregamento com proteção de baterias integrado (BMS). Para isto também foi necessário diminuir se o tamanho do pack de baterias de 6 para duas (voltagem resultante de ~7.4V). 
+
+Como se diminui o pack de baterias a voltagem resultante não era suficiente para alimentar diretamente os sensores então introduziu se mais um módulo, um módulo dc-dc step up para trazer a voltagem para ~20V.
+
+**Imagem da topologia do protótipo 2 com os novos componentes**
+
+Foi também adicionada mais uma funcionalidade ao projeto neste protótipo:
+
+Como o pack de baterias é recarregável é preciso o utilizador conseguir monitorizar o estado de bateria do projeto, para isso adicionou se uma amostragem da percentagem da bateria no ecrã
+
+Problema: O pico não está ligado diretamente a bateria. Como o pico está ligado a um modulo dc-dc step down ele recebe sempre ~5V independente do estado da bateria (ou 0 se a bateria estiver descarregada).
+
+Solução: Usar um divisor de voltagem para o ligar diretamente o pico a bateria num pin de converção analogica-digital
+
+**Imagem do circuito do divisor de tensão**
+
+
+
+
+
+
+
+
+
+
