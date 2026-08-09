@@ -1,107 +1,233 @@
-\documentclass[12pt]{article}
+\documentclass[11pt,a4paper]{article}
 
-% ----------------------------------------------------------------------
-% Define external packages, language, margins, fonts, new commands 
-% and colors
-% ----------------------------------------------------------------------
-\usepackage[utf8]{inputenc} % Codification
-\usepackage[english]{babel} % Writing idiom
-
-\usepackage{listings}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[most]{tcolorbox}
-\usepackage{float}
-
-
-\definecolor{codebg}{RGB}{245,245,245}
-\definecolor{codeframe}{RGB}{200,200,200}
-
-\lstdefinestyle{CiscoStyle}{
-    backgroundcolor=\color{codebg},
-    basicstyle=\ttfamily\small,
-    keywordstyle=\color{blue},
-    commentstyle=\color{gray},
-    breaklines=true,
-    showstringspaces=false,
-    columns=fullflexible
-}
-
-\newtcblisting{configbox}{
-    listing only,
-    colback=codebg,
-    colframe=codeframe,
-    arc=3mm,
-    boxrule=0.5pt,
-    left=2mm,
-    right=2mm,
-    top=1mm,
-    bottom=1mm,
-    listing options={style=CiscoStyle}
-}
-
-\newtcblisting{largeconfigbox}{
-    listing only,
-    breakable,
-    colback=codebg,
-    colframe=codeframe,
-    arc=3mm,
-    boxrule=0.5pt,
-    listing options={
-        style=CiscoStyle,
-        basicstyle=\ttfamily\scriptsize
-    }
-}
-
+% ---------- Pacotes ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
 \usepackage{graphicx}
-\usepackage[export]{adjustbox} % Align images
-\usepackage{amsmath} % Extra commands for math mode
-\usepackage{amssymb} % Mathematical symbols
-\usepackage{anysize} % Personalize margins
-    \marginsize{2cm}{2cm}{2cm}{2cm} % {left}{right}{above}{below}
-\usepackage{appendix} % Appendices
-\usepackage{cancel} % Expression cancellation
-\usepackage{caption} % Captions
-    \captionsetup{labelfont={bf}}
-\usepackage{cite} % Citations, like [1 - 3]
-\usepackage{color} % Text coloring
-\usepackage{fancyhdr} % Head note and footnote
-    \pagestyle{fancy}
-    \fancyhf{}
-    \fancyhead[L]{\footnotesize IST} % Left of Head note
-    \fancyhead[R]{\footnotesize ULisboa} % Right of Head note
-    \fancyfoot[L]{\footnotesize SAAR} % Left of Footnote
-    \fancyfoot[C]{\thepage} % Center of Footnote
-    \fancyfoot[R]{\footnotesize METI} % Right of Footnote
-    \renewcommand{\footrulewidth}{0.4pt} % Footnote rule
-\usepackage{float} % Utilization of [H] in figures
-\usepackage{graphicx} % Figures in LaTeX
-\usepackage[colorlinks = true, plainpages = true, linkcolor = istblue, urlcolor = istblue, citecolor = istblue, anchorcolor = istblue]{hyperref}
-\usepackage{indentfirst} % First paragraph
-\usepackage[super]{nth} % Superscripts
-\usepackage{siunitx} % SI units
-\usepackage{subcaption} % Subfigures
-\usepackage{titlesec} % Font
-    \titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
-    \titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
-    \titleformat{\subsubsection}{\normalsize\bfseries}{\thesubsubsection}{1em}{}
-    \fancyfoot[C]{\thepage}
 
-% New and re-newcommands
-\newcommand{\sen}{\operatorname{\sen}} % Sine function definition
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Specific rule definition
-\renewcommand{\appendixpagename}{\LARGE Appendices}
+\tcbuselibrary{skins,breakable}
 
-% Colors
-\definecolor{istblue}{RGB}{3, 171, 230}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
+% ---------- Cores ----------
+\definecolor{corprincipal}{RGB}{31,73,125}
+\definecolor{corsecundaria}{RGB}{68,114,148}
+\definecolor{cinzaclaro}{RGB}{245,245,245}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                 Document                             %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ---------- Formatação de secções ----------
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{corprincipal}}
+  {\thesection}{0.8em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{corsecundaria}}
+  {\thesubsection}{0.7em}{}
+
+% ---------- Cabeçalho / rodapé ----------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\small Sprint Timer -- Relatório de Projeto}
+\fancyhead[R]{\small José Oliveira}
+\fancyfoot[C]{\thepage}
+
+% ---------- Caixa de problema/solução ----------
+\newtcolorbox{probsol}[1]{
+  breakable, enhanced,
+  colback=cinzaclaro, colframe=corsecundaria,
+  boxrule=0.5pt, arc=2pt,
+  left=6pt, right=6pt, top=4pt, bottom=4pt,
+  title={#1}, fonttitle=\bfseries\color{white},
+  colbacktitle=corsecundaria,
+}
+
+% ---------- Placeholder de imagem ----------
+\newcommand{\imagemplaceholder}[2]{
+  \begin{center}
+  \fbox{
+    \begin{minipage}[c][#1][c]{0.85\textwidth}
+      \centering
+      \color{gray}\itshape #2
+    \end{minipage}
+  }
+  \end{center}
+}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=corprincipal,
+    urlcolor=corprincipal,
+}
+
+\title{}
+\author{}
+\date{}
 
 \begin{document}
 
-documento em latex
+% ================= PÁGINA DE TÍTULO =================
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+
+{\Huge\bfseries\color{corprincipal} Raul 3000 - Sprint Timer}\\[0.5cm]
+{\Large Medidor de Velocidade de Sprint com Sensores de Movimento}\\[2cm]
+
+{\large Relatório de Projeto}\\[3cm]
+
+\rule{0.6\textwidth}{0.4pt}\\[0.5cm]
+{\large José Oliveira}\\[0.3cm]
+{\normalsize \today}
+
+\vfill
+
+{\small Projeto de eletrónica e automação}
+
+\end{titlepage}
+
+% ================= INTRODUÇÃO =================
+\section*{Introdução}
+\addcontentsline{toc}{section}{Introdução}
+
+O projeto \emph{Sprint Timer} tem como objetivo medir a velocidade de um sprint através do tempo decorrido entre a ativação de dois sensores de movimento: um sensor de partida e um sensor de chegada. O tempo medido é apresentado ao utilizador num ecrã LCD integrado numa caixa de plástico, permitindo uma utilização simples e portátil.
+
+O sistema é construído em torno de um microcontrolador Raspberry Pi Pico, responsável por gerir os sensores, contar o tempo e controlar o ecrã de resultados. Ao longo do desenvolvimento, o projeto passou por duas iterações principais: um primeiro protótipo funcional, alimentado por um pack de baterias não recarregável, e um protótipo final, que introduz uma solução de carregamento integrada e monitorização do estado da bateria.
+
+Os principais componentes utilizados no projeto são:
+
+\begin{itemize}[itemsep=1pt]
+    \item Sensores de movimento (2)
+    \item Relays mecânicos (2)
+    \item Microcontrolador Raspberry Pi Pico (1)
+    \item Módulo DC-DC \textit{step-up} (1)
+    \item Módulo DC-DC \textit{step-down} (1)
+    \item Módulo de carregamento com BMS (1)
+    \item Display LCD (1)
+    \item Módulo adaptador I2C (1)
+    \item Baterias de lítio 3.7V (2)
+    \item Caixa de plástico (1)
+    \item Cabos diversos
+\end{itemize}
+
+Este relatório descreve o percurso de desenvolvimento do projeto, desde o conceito inicial até ao protótipo final, apresentando os problemas encontrados em cada fase e as soluções adotadas para os resolver.
+
+% ================= SECÇÃO 1: CONCEITO INICIAL =================
+\section{Conceito Inicial}
+
+A ideia inicial do projeto assentava num sistema simples, composto por dois sensores de movimento e um ``cérebro'' central. Um dos sensores funcionaria como sensor de partida, iniciando a contagem do tempo, enquanto o segundo funcionaria como sensor de chegada, terminando essa contagem. A diferença de tempo entre a ativação dos dois sensores corresponderia, na prática, ao tempo de sprint entre eles.
+
+Este conceito serviu de base para todo o desenvolvimento posterior, sendo que a principal evolução do projeto consistiu em definir como implementar fisicamente este ``cérebro'' e como resolver os desafios de compatibilidade elétrica e de alimentação que foram surgindo.
+
+% ================= SECÇÃO 2: PRIMEIRO PROTÓTIPO =================
+\section{Primeiro Protótipo Funcional}
+
+Nesta fase do desenvolvimento, o objetivo foi construir um protótipo totalmente funcional, ainda sem uma solução de alimentação integrada e recarregável. Foram identificados e resolvidos cinco problemas principais.
+
+\subsection{O Cérebro do Sistema}
+
+\begin{probsol}{Problema}
+Como implementar o ``cérebro'' do sistema e como o ligar aos dois sensores de movimento.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foi utilizado um microcontrolador Raspberry Pi Pico, programado com um código simples em Python. O Pico está diretamente ligado aos sensores por cabo: inicia a contagem do tempo quando o sensor de partida é ativado e termina a contagem quando o sensor de chegada é ativado.
+\end{probsol}
+
+\subsection{Compatibilização de Tensões}
+
+\begin{probsol}{Problema}
+Os sensores de movimento operam entre 12V e 24V, enquanto o Raspberry Pi Pico apenas suporta tensões entre 3.3V e 5V. Não é possível ligá-los diretamente.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foram utilizados relays mecânicos para separar fisicamente as correntes dos sensores e do microcontrolador, permitindo ainda assim a comunicação entre ambos. Esta solução implica a existência de duas fontes de alimentação com voltagens diferentes.
+\end{probsol}
+
+\subsection{Visualização dos Resultados}
+
+\begin{probsol}{Problema}
+Como permitir ao utilizador visualizar o resultado das corridas medidas.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foi integrado um pequeno ecrã LCD, que apresenta os três últimos tempos registados (o mais recente e os dois anteriores, evitando a perda de informação em caso de uma leitura falsa) e o estado atual do sistema.
+\end{probsol}
+
+O sistema opera segundo quatro estados distintos:
+
+\begin{itemize}
+    \item \textbf{A iniciar} -- Ao ligar o projeto, este demora 5 segundos a arrancar e a passar para o estado seguinte. Durante este período é possível verificar que o ecrã está a funcionar corretamente, mas não é possível iniciar uma contagem, mesmo que o sensor de partida seja ativado.
+    \item \textbf{Pronto para medição} -- Após o estado inicial, ou após a apresentação de uma medição, o sistema fica pronto para iniciar um novo sprint. Basta ativar o sensor de partida para começar a medição.
+    \item \textbf{A medir / em funcionamento} -- Após a ativação do sensor de partida (estando o sistema no estado ``pronto para medição''), inicia-se a contagem do tempo, que só termina quando o sensor de chegada é ativado. Este estado só é alcançado se o estado anterior for ``pronto para medição''; a ativação do sensor de partida em qualquer outro estado, incluindo este, não inicia uma nova medição.
+    \item \textbf{A mostrar medição / resultado} -- Alcançado quando o sensor de chegada é ativado durante uma medição em curso. Neste estado, o sistema apresenta o último resultado durante 5 segundos, não sendo possível iniciar uma nova medição nesse intervalo.
+\end{itemize}
+
+\imagemplaceholder{6cm}{Imagem da topologia do projeto: Raspberry Pi Pico, os dois sensores ligados através dos relays, o módulo step-down, o ecrã LCD e a fonte de alimentação.}
+
+\subsection{Alimentação do Sistema}
+
+\begin{probsol}{Problema}
+Como alimentar o projeto de forma prática e portátil.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foram consideradas duas opções: alimentar o projeto através de cabo, ligado a uma fonte de alimentação de corrente alternada (tomada), ou dotar o projeto de uma fonte de alimentação própria, integrada. Foi escolhida a segunda opção, através de um pack de baterias de lítio integrado.
+\end{probsol}
+
+\subsection{Fontes de Alimentação Distintas a Partir de um Único Pack}
+
+\begin{probsol}{Problema}
+Como obter duas fontes de alimentação com voltagens diferentes a partir do mesmo pack de baterias, uma vez que os sensores e o microcontrolador requerem tensões distintas.
+\end{probsol}
+
+\begin{probsol}{Solução}
+A solução inicial consistiu num pack de 6 baterias de 3.7V ligadas em série, resultando numa tensão de aproximadamente 22.2V. O pack de baterias foi ligado diretamente aos sensores, enquanto para o Raspberry Pi Pico foi utilizado um módulo DC-DC \textit{step-down}, configurado para fornecer entre 4V e 5V.
+\end{probsol}
+
+Com esta solução, o projeto ficou totalmente funcional. No entanto, permanecia um problema por resolver: o pack de baterias tinha de ser periodicamente substituído ou recarregado externamente, não existindo nesta iteração uma solução de carregamento integrada.
+
+% ================= SECÇÃO 3: PROTÓTIPO FINAL =================
+\section{Protótipo Final}
+
+O segundo e último protótipo tem como principal objetivo resolver o problema de alimentação deixado em aberto na iteração anterior, introduzindo uma solução de carregamento integrada.
+
+\subsection{Solução de Carregamento Integrada}
+
+\begin{probsol}{Problema}
+O pack de baterias do primeiro protótipo não podia ser recarregado de forma integrada, exigindo substituição ou carregamento externo periódico.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foi introduzido um módulo de carregamento com proteção de baterias integrado (BMS). Para viabilizar esta solução, foi necessário reduzir o pack de baterias de 6 para 2 unidades, resultando numa tensão de aproximadamente 7.4V. Como esta tensão deixou de ser suficiente para alimentar diretamente os sensores, foi introduzido um módulo DC-DC \textit{step-up}, elevando a tensão para aproximadamente 20V.
+\end{probsol}
+
+\imagemplaceholder{6cm}{Imagem da topologia do protótipo final, incluindo o módulo de carregamento BMS e o módulo step-up.}
+
+\subsection{Monitorização do Estado da Bateria}
+
+Com a introdução de um pack de baterias recarregável, tornou-se necessário permitir ao utilizador monitorizar o estado de carga da bateria. Para isso, foi adicionada ao ecrã uma amostragem da percentagem de bateria disponível.
+
+\begin{probsol}{Problema}
+O Raspberry Pi Pico não está ligado diretamente à bateria, mas sim a um módulo DC-DC \textit{step-down}, pelo que recebe sempre uma tensão constante de aproximadamente 5V, independentemente do estado real da bateria (ou 0V caso esta esteja descarregada). Isto impossibilita a leitura direta do nível de carga.
+\end{probsol}
+
+\begin{probsol}{Solução}
+Foi utilizado um divisor de tensão para ligar o Raspberry Pi Pico diretamente à bateria através de um pino de conversão analógico-digital, permitindo a leitura da tensão real da bateria e, consequentemente, o cálculo da sua percentagem de carga.
+\end{probsol}
+
+\imagemplaceholder{5cm}{Imagem do circuito do divisor de tensão.}
+
+% ================= CONCLUSÃO =================
+\section*{Conclusão}
+\addcontentsline{toc}{section}{Conclusão}
+
+O projeto \emph{Sprint Timer} evoluiu de um conceito simples, baseado em dois sensores de movimento e um microcontrolador, para um sistema portátil e autónomo capaz de medir e apresentar a velocidade de um sprint com fiabilidade. Ao longo do desenvolvimento foram resolvidos desafios de compatibilidade elétrica entre sensores e microcontrolador, de gestão de estados do sistema e, por fim, de alimentação energética.
+
+A evolução do primeiro para o protótipo final traduziu-se, sobretudo, na passagem de uma fonte de alimentação não recarregável para uma solução de carregamento integrada com monitorização do estado da bateria, tornando o sistema mais prático e autónomo para uma utilização continuada.
 
 \end{document}
