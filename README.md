@@ -1,4 +1,4 @@
-# Sprint Timer Project - Raul 3000
+# Sprint Timer Project - *Raul 3000*
 
 In this repository there's code and a latex report for a small automation project developed for highschool use.
 
