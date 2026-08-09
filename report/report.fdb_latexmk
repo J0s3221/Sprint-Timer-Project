@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1786301356.67624 "/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex" "report.pdf" "report" 1786301357.47727 0
+["pdflatex"] 1786303433.13702 "/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex" "report.pdf" "report" 1786303433.89936 0
   "/etc/texmf/web2c/texmf.cnf" 1777045507.75276 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex" 1786301356.37596 12222 25528f63901b7ecab07b16de9156d9c2 ""
+  "/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex" 1786303432.9042 13943 760e368bcd3ca9df5aa216ee978a009d ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1095.tfm" 1136768653 3584 21b378cca2e40816b0e6d74a4dc98f04 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -167,9 +167,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1777045531.67963 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1777045637 8213238 f7f1ddc7879e0990d63469a7d38238bc ""
-  "report.aux" 1786301357.42019 1792 ed00ca328ca1c402e31ae7a8f72c7a7a "pdflatex"
-  "report.out" 1786301357.42019 2259 8ff3428155476b061b27e017d6759c69 "pdflatex"
-  "report.tex" 1786301356.37596 12222 25528f63901b7ecab07b16de9156d9c2 ""
+  "report.aux" 1786303433.84135 2184 8ee2232dc5979b468efc87836ecc5cb8 "pdflatex"
+  "report.out" 1786303433.84526 2898 4dc896efeebc8f3926a0921205490cbc "pdflatex"
+  "report.tex" 1786303432.9042 13943 760e368bcd3ca9df5aa216ee978a009d ""
   (generated)
   "report.aux"
   "report.log"

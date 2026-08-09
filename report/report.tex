@@ -128,6 +128,12 @@ Este conceito serviu de base para todo o desenvolvimento posterior, sendo que a 
 
 Nesta fase do desenvolvimento, o objetivo foi construir um protótipo totalmente funcional, ainda sem uma solução de alimentação integrada e recarregável. Foram identificados e resolvidos cinco problemas principais.
 
+\subsection{Protótipo 0}
+
+Antes de se chegar a uma versão funcional dentro de caixa, o circuito foi montado e testado numa placa de desenvolvimento (\textit{breadboard}), permitindo validar as ligações entre o microcontrolador, os sensores e os restantes componentes antes da integração final. Por facilidade de referência ao longo deste relatório, esta fase de testes iniciais é designada como ``Protótipo 0''.
+
+\imagemplaceholder{6cm}{Fotografia do circuito montado em placa de desenvolvimento (Protótipo 0).}
+
 \subsection{O Cérebro do Sistema}
 
 \begin{probsol}{Problema}
@@ -169,6 +175,8 @@ O sistema opera segundo quatro estados distintos:
 
 \imagemplaceholder{6cm}{Imagem da topologia do projeto: Raspberry Pi Pico, os dois sensores ligados através dos relays, o módulo step-down, o ecrã LCD e a fonte de alimentação.}
 
+\imagemplaceholder{5cm}{Fotografia do ecrã LCD (ainda sem tempos registados).}
+
 \subsection{Alimentação do Sistema}
 
 \begin{probsol}{Problema}
@@ -208,6 +216,8 @@ Foi introduzido um módulo de carregamento com proteção de baterias integrado 
 
 \imagemplaceholder{6cm}{Imagem da topologia do protótipo final, incluindo o módulo de carregamento BMS e o módulo step-up.}
 
+\imagemplaceholder{5cm}{Fotografia da caixa a carregar.}
+
 \subsection{Monitorização do Estado da Bateria}
 
 Com a introdução de um pack de baterias recarregável, tornou-se necessário permitir ao utilizador monitorizar o estado de carga da bateria. Para isso, foi adicionada ao ecrã uma amostragem da percentagem de bateria disponível.
@@ -220,7 +230,17 @@ O Raspberry Pi Pico não está ligado diretamente à bateria, mas sim a um módu
 Foi utilizado um divisor de tensão para ligar o Raspberry Pi Pico diretamente à bateria através de um pino de conversão analógico-digital, permitindo a leitura da tensão real da bateria e, consequentemente, o cálculo da sua percentagem de carga.
 \end{probsol}
 
-\imagemplaceholder{5cm}{Imagem do circuito do divisor de tensão.}
+\imagemplaceholder{5cm}{Fotografia do circuito do divisor de tensão.}
+
+\subsection{Integração e Montagem Final}
+
+Com todos os componentes e funcionalidades resolvidos, o circuito foi integrado dentro da caixa de plástico, resultando no produto final do projeto.
+
+\imagemplaceholder{6cm}{Fotografia do interior da caixa, já com todos os componentes montados.}
+
+\imagemplaceholder{6cm}{Fotografia da caixa vista de frente.}
+
+\imagemplaceholder{6cm}{Fotografia do projeto em funcionamento.}
 
 % ================= CONCLUSÃO =================
 \section*{Conclusão}
@@ -229,5 +249,18 @@ Foi utilizado um divisor de tensão para ligar o Raspberry Pi Pico diretamente �
 O projeto \emph{Sprint Timer} evoluiu de um conceito simples, baseado em dois sensores de movimento e um microcontrolador, para um sistema portátil e autónomo capaz de medir e apresentar a velocidade de um sprint com fiabilidade. Ao longo do desenvolvimento foram resolvidos desafios de compatibilidade elétrica entre sensores e microcontrolador, de gestão de estados do sistema e, por fim, de alimentação energética.
 
 A evolução do primeiro para o protótipo final traduziu-se, sobretudo, na passagem de uma fonte de alimentação não recarregável para uma solução de carregamento integrada com monitorização do estado da bateria, tornando o sistema mais prático e autónomo para uma utilização continuada.
+
+% ================= ANEXO =================
+\newpage
+\section*{Anexo -- Fotografias Adicionais do Desenvolvimento}
+\addcontentsline{toc}{section}{Anexo -- Fotografias Adicionais do Desenvolvimento}
+
+Esta secção reúne fotografias adicionais do processo de desenvolvimento do Protótipo 0, documentadas ao longo dos testes iniciais do circuito.
+
+\imagemplaceholder{5cm}{Fotografia do Protótipo 0 em placa de desenvolvimento (vista de cima).}
+
+\imagemplaceholder{5cm}{Fotografia do Protótipo 0 em placa de desenvolvimento.}
+
+\imagemplaceholder{5cm}{Fotografia do Protótipo 0 junto ao caderno de anotações do desenvolvimento.}
 
 \end{document}
