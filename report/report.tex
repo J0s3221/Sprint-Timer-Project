@@ -13,7 +13,7 @@
 \usepackage{fancyhdr}
 \usepackage{graphicx}
 \usepackage{float}
-\graphicspath{{images/}}
+\graphicspath{{../images/}}
 
 \tcbuselibrary{skins,breakable}
 
@@ -143,7 +143,7 @@ Nesta fase do desenvolvimento, o objetivo foi construir um protótipo totalmente
 
 Antes de se chegar a uma versão funcional dentro de caixa, o circuito foi montado e testado numa placa de desenvolvimento (\textit{breadboard}), permitindo validar as ligações entre o microcontrolador, os sensores e os restantes componentes antes da integração final. Por facilidade de referência ao longo deste relatório, esta fase de testes iniciais é designada como ``Protótipo 0''.
 
-\imagemfoto{0.6\textwidth}{protopito_0.jpeg}{Fotografia do circuito montado em placa de desenvolvimento (Protótipo 0).}
+\imagemfoto{0.6\textwidth}{prototipo em dev board.jpeg}{Fotografia do circuito montado em placa de desenvolvimento (Protótipo 0).}
 
 \subsection{O Cérebro do Sistema}
 
@@ -186,7 +186,7 @@ O sistema opera segundo quatro estados distintos:
 
 \imagemplaceholder{6cm}{Imagem da topologia do projeto: Raspberry Pi Pico, os dois sensores ligados através dos relays, o módulo step-down, o ecrã LCD e a fonte de alimentação.}
 
-\imagemfoto{0.55\textwidth}{display__sem_tempos_registados_.jpg}{Fotografia do ecrã LCD (ainda sem tempos registados).}
+\imagemfoto{0.55\textwidth}{display (sem tempos registados).jpg}{Fotografia do ecrã LCD (ainda sem tempos registados).}
 
 \subsection{Alimentação do Sistema}
 
@@ -227,7 +227,7 @@ Foi introduzido um módulo de carregamento com proteção de baterias integrado 
 
 \imagemplaceholder{6cm}{Imagem da topologia do protótipo final, incluindo o módulo de carregamento BMS e o módulo step-up.}
 
-\imagemfoto{0.6\textwidth}{caixa_a_carregar.jpg}{Fotografia da caixa a carregar.}
+\imagemfoto{0.6\textwidth}{caixa a carregar.jpg}{Fotografia da caixa a carregar.}
 
 \subsection{Monitorização do Estado da Bateria}
 
@@ -241,17 +241,17 @@ O Raspberry Pi Pico não está ligado diretamente à bateria, mas sim a um módu
 Foi utilizado um divisor de tensão para ligar o Raspberry Pi Pico diretamente à bateria através de um pino de conversão analógico-digital, permitindo a leitura da tensão real da bateria e, consequentemente, o cálculo da sua percentagem de carga.
 \end{probsol}
 
-\imagemfoto{0.5\textwidth}{Divisor_de_tensao__foto_.jpg}{Fotografia do circuito do divisor de tensão.}
+\imagemfoto{0.5\textwidth}{Divisor de tensao (foto).jpg}{Fotografia do circuito do divisor de tensão.}
 
 \subsection{Integração e Montagem Final}
 
 Com todos os componentes e funcionalidades resolvidos, o circuito foi integrado dentro da caixa de plástico, resultando no produto final do projeto.
 
-\imagemfoto{0.6\textwidth}{interior_da_caixa.jpg}{Fotografia do interior da caixa, já com todos os componentes montados.}
+\imagemfoto{0.6\textwidth}{interior da caixa.jpg}{Fotografia do interior da caixa, já com todos os componentes montados.}
 
-\imagemfoto{0.5\textwidth}{caixa_de_frente.jpg}{Fotografia da caixa vista de frente.}
+\imagemfoto{0.5\textwidth}{caixa de frente.jpg}{Fotografia da caixa vista de frente.}
 
-\imagemfoto{0.55\textwidth}{projeto_em_funcionamento.jpg}{Fotografia do projeto em funcionamento.}
+\imagemfoto{0.55\textwidth}{projeto em funcionamento.jpg}{Fotografia do projeto em funcionamento.}
 
 % ================= CONCLUSÃO =================
 \section*{Conclusão}
@@ -268,10 +268,8 @@ A evolução do primeiro para o protótipo final traduziu-se, sobretudo, na pass
 
 Esta secção reúne fotografias adicionais do processo de desenvolvimento do Protótipo 0, documentadas ao longo dos testes iniciais do circuito.
 
-\imagemfoto{0.6\textwidth}{prototipo_em_dev_board__vista_de_cima_.jpeg}{Fotografia do Protótipo 0 em placa de desenvolvimento (vista de cima).}
+\imagemfoto{0.6\textwidth}{prototipo em dev board (vista de cima).jpeg}{Fotografia do Protótipo 0 em placa de desenvolvimento (vista de cima).}
 
-\imagemfoto{0.6\textwidth}{prototipo_em_dev_board.jpeg}{Fotografia do Protótipo 0 em placa de desenvolvimento.}
-
-\imagemfoto{0.55\textwidth}{prototipo_0_e_caderno.jpeg}{Fotografia do Protótipo 0 junto ao caderno de anotações do desenvolvimento.}
+\imagemfoto{0.55\textwidth}{prototipo 0 e caderno.jpeg}{Fotografia do Protótipo 0 junto ao caderno de anotações do desenvolvimento.}
 
 \end{document}

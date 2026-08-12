@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.24)  10 AUG 2026 00:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.4.24)  12 AUG 2026 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -545,6 +545,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package hyperref Info: Link coloring ON on input line 82.
+ (./report.out) (./report.out)
 \@outlinefile=\write4
 \openout4 = `report.out'.
 
@@ -556,250 +557,128 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.145 
        [1{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-
-LaTeX Warning: File `protopito_0.jpeg' not found on input line 146.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:146: Package pdftex.def Error: File `protopito_0.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 ...placa de desenvolvimento (Protótipo 0).}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 146.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [2
+<../images/prototipo em dev board.jpeg, id=81, 2047.65pt x 1535.7375pt>
+File: ../images/prototipo em dev board.jpeg Graphic file (type jpg)
+<use ../images/prototipo em dev board.jpeg>
+Package pdftex.def Info: ../images/prototipo em dev board.jpeg  used on input line 146.
+(pdftex.def)             Requested size: 273.14014pt x 204.8551pt.
+ [2
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.168 \subsection{Visualização dos Resultados}
-                                                ]
+l.172 \end{probsol}
+                    <../images/prototipo em dev board.jpeg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 187.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 187.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 187.
-
-
-LaTeX Warning: File `display__sem_tempos_registados_.jpg' not found on input line 189.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:189: Package pdftex.def Error: File `display__sem_tempos_registados_.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.189 ...ecrã LCD (ainda sem tempos registados).}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3] [4
+<../images/display (sem tempos registados).jpg, id=89, 953.5625pt x 1261.71375pt>
+File: ../images/display (sem tempos registados).jpg Graphic file (type jpg)
+<use ../images/display (sem tempos registados).jpg>
+Package pdftex.def Info: ../images/display (sem tempos registados).jpg  used on input line 189.
+(pdftex.def)             Requested size: 193.53185pt x 256.0732pt.
+ [3] [4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.218 ...tion{Solução de Carregamento Integrada}
-                                                  ]
-
-LaTeX Warning: File `caixa_a_carregar.jpg' not found on input line 230.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:230: Package pdftex.def Error: File `caixa_a_carregar.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.230 ...gar.jpg}{Fotografia da caixa a carregar.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[5]
-
-LaTeX Warning: File `Divisor_de_tensao__foto_.jpg' not found on input line 244.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:244: Package pdftex.def Error: File `Divisor_de_tensao__foto_.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.244 ...rafia do circuito do divisor de tensão.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6
+                                                   <../images/display (sem tempos registados).jpg>]
+<../images/caixa a carregar.jpg, id=99, 1927.2pt x 1084.05pt>
+File: ../images/caixa a carregar.jpg Graphic file (type jpg)
+<use ../images/caixa a carregar.jpg>
+Package pdftex.def Info: ../images/caixa a carregar.jpg  used on input line 230.
+(pdftex.def)             Requested size: 273.12912pt x 153.63512pt.
+ [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.245 
-      ]
-
-LaTeX Warning: File `interior_da_caixa.jpg' not found on input line 250.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:250: Package pdftex.def Error: File `interior_da_caixa.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ..., já com todos os componentes montados.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `caixa_de_frente.jpg' not found on input line 252.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:252: Package pdftex.def Error: File `caixa_de_frente.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ...pg}{Fotografia da caixa vista de frente.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[7
+l.238 \end{probsol}
+                    <../images/caixa a carregar.jpg>]
+<../images/Divisor de tensao (foto).jpg, id=105, 1084.05pt x 1927.2pt>
+File: ../images/Divisor de tensao (foto).jpg Graphic file (type jpg)
+<use ../images/Divisor de tensao (foto).jpg>
+Package pdftex.def Info: ../images/Divisor de tensao (foto).jpg  used on input line 244.
+(pdftex.def)             Requested size: 144.0412pt x 256.07324pt.
+<../images/interior da caixa.jpg, id=106, 1541.76pt x 2055.68pt>
+File: ../images/interior da caixa.jpg Graphic file (type jpg)
+<use ../images/interior da caixa.jpg>
+Package pdftex.def Info: ../images/interior da caixa.jpg  used on input line 250.
+(pdftex.def)             Requested size: 192.0373pt x 256.04973pt.
+ [6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.253 
-      
+l.251 
+       <../images/Divisor de tensao (foto).jpg>]
+<../images/caixa de frente.jpg, id=113, 925.4575pt x 1179.40625pt>
+File: ../images/caixa de frente.jpg Graphic file (type jpg)
+<use ../images/caixa de frente.jpg>
+Package pdftex.def Info: ../images/caixa de frente.jpg  used on input line 252.
+(pdftex.def)             Requested size: 200.93234pt x 256.06888pt.
+<../images/projeto em funcionamento.jpg, id=114, 1084.05pt x 1927.2pt>
+File: ../images/projeto em funcionamento.jpg Graphic file (type jpg)
+<use ../images/projeto em funcionamento.jpg>
+Package pdftex.def Info: ../images/projeto em funcionamento.jpg  used on input line 254.
+(pdftex.def)             Requested size: 144.0412pt x 256.07324pt.
+ [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.253 
-      ]
-
-LaTeX Warning: File `projeto_em_funcionamento.jpg' not found on input line 254.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:254: Package pdftex.def Error: File `projeto_em_funcionamento.jpg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.254 ...{Fotografia do projeto em funcionamento.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[8
+l.255 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 
-      
+l.255 
+       <../images/interior da caixa.jpg> <../images/caixa de frente.jpg>] [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.263 
-      ] [9]
-
-LaTeX Warning: File `prototipo_em_dev_board__vista_de_cima_.jpeg' not found on input line 271.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:271: Package pdftex.def Error: File `prototipo_em_dev_board__vista_de_cima_.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ...laca de desenvolvimento (vista de cima).}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `prototipo_em_dev_board.jpeg' not found on input line 273.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:273: Package pdftex.def Error: File `prototipo_em_dev_board.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.273 ...rotótipo 0 em placa de desenvolvimento.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `prototipo_0_e_caderno.jpeg' not found on input line 275.
-
-
-/home/ataid_jo/Sprint/Sprint-Timer-Project/report/report.tex:275: Package pdftex.def Error: File `prototipo_0_e_caderno.jpeg' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.275 ...derno de anotações do desenvolvimento.}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[10
+l.265 \newpage
+               <../images/projeto em funcionamento.jpg>]
+<../images/prototipo em dev board (vista de cima).jpeg, id=125, 1535.7375pt x 2047.65pt>
+File: ../images/prototipo em dev board (vista de cima).jpeg Graphic file (type jpg)
+<use ../images/prototipo em dev board (vista de cima).jpeg>
+Package pdftex.def Info: ../images/prototipo em dev board (vista de cima).jpeg  used on input line 271.
+(pdftex.def)             Requested size: 192.03702pt x 256.04935pt.
+<../images/prototipo 0 e caderno.jpeg, id=126, 1084.05pt x 1927.2pt>
+File: ../images/prototipo 0 e caderno.jpeg Graphic file (type jpg)
+<use ../images/prototipo 0 e caderno.jpeg>
+Package pdftex.def Info: ../images/prototipo 0 e caderno.jpeg  used on input line 273.
+(pdftex.def)             Requested size: 144.0412pt x 256.07324pt.
+ [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.276 
-      
+l.275 \end{document}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{figure.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.276 
-      ] [11
-pdfTeX warning (ext4): destination with the same identifier (name{figure.10}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.277 \end{document}
-                    ] (./report.aux)
+l.275 \end{document}
+                     <../images/prototipo em dev board (vista de cima).jpeg> <../images/prototipo 0 e caderno.jpeg>] (./report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8FB08EB12271F5722D1567592DF4FFE7;2886.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 8FB08EB12271F5722D1567592DF4FFE7;2886.
  ) 
 Here is how much of TeX's memory you used:
- 25296 strings out of 474222
- 506387 string characters out of 5748733
- 1937975 words of memory out of 5000000
- 47145 multiletter control sequences out of 15000+600000
- 569096 words of font info for 57 fonts, out of 8000000 for 9000
+ 25072 strings out of 474222
+ 498439 string characters out of 5748733
+ 1938975 words of memory out of 5000000
+ 46924 multiletter control sequences out of 15000+600000
+ 568782 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,13n,107p,527b,955s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on report.pdf (12 pages, 221508 bytes).
+</usr/share/texmf/fonts/type1/public/cm-super/sfbx1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1095.pfb>
+Output written on report.pdf (10 pages, 2300485 bytes).
 PDF statistics:
- 145 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 PDF objects out of 1000 (max. 8388607)
+ 144 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
